@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 
+import Nav from './scr/nav';
+
 class App extends Component{
 render() {
   return (
     <View style={style.mainView}>
+
+      <Nav/>
+
       <View style={style.basicView}>
       <Text style={style.basicText}>Hello Gill</Text>
       </View>
