@@ -6,13 +6,13 @@ render() {
   return (
     <View style={style.mainView}>
       <View style={style.basicView}>
-      <Text>Hello Gill</Text>
+      <Text style={style.basicText}>Hello Gill</Text>
       </View>
       <View style={style.basicView}>
-      <Text>Hello Guy</Text>
+      <Text style={style.basicText}>Hello Guy</Text>
       </View>
       <View style={style.basicView}>
-      <Text>Hello Gay</Text>
+      <Text style={style.basicText}>Hello Gay</Text>
       </View>
     </View>
     );
@@ -25,7 +25,10 @@ const style = StyleSheet.create({
     paddingTop:50, backgroundColor:'white', alignItems: 'flex-start', justifyContent:'flex-start', width:'100%'
   },
   basicView:{
-    backgroundColor:'green', width:'100%', marginBottom:5, color:'white'
+    backgroundColor:'green', width:'100%', marginBottom:5,
+  },
+  basicText:{
+    fontSize:30, color:'#ffffff', textAlign:'center', padding:20
   }
 })
 
