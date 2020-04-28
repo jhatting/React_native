@@ -5,7 +5,7 @@ class Input extends Component{
 
     state = {
         myTextInput:'',
-        users:['John', 'James', 'isa', 'ohn', 'ames', 'Lisa' ]
+        users:['John', 'James', 'isa', 'ohn', 'ames', 'Lisa','John', 'James', 'isa', 'ohn', 'ames', 'Lisa' ]
     }
 
     onChangeInput = (event) => {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, ScrollView} from 'react-native';
 
 import Nav from './scr/nav';
 import Generator from './scr/generator';
@@ -56,7 +56,14 @@ render() {
       items={this.state.random}
       delete={this.onItemDelete}
       /> */}
+    <ScrollView style={{width:'100%'}}
+    // onContentSizeChange={ (w,h)=> alert(h)}
+    // onMomentumScrollBegin={()=>alert('start')}
+    // onMomentumScrollEnd={()=>alert('end')}
+    onScroll={()=>alert('scrolling')}
+    >
 <Input/>
+</ScrollView>
     </View>
     );
   }
