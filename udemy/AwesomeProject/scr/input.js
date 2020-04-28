@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput, Button, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 class Input extends Component{
 
@@ -25,7 +25,7 @@ class Input extends Component{
 
     render(){
         return(
-        <ScrollView style={{width:'100%'}}>
+        
             <View style={styles.inputWrapper}>
                 <TextInput 
                     value={this.state.myTextInput}
@@ -47,7 +47,6 @@ class Input extends Component{
                 }
         
             </View>
-        </ScrollView>
             
         )
     }

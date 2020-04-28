@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, ScrollView} from 'react-native';
 import Nav from './scr/nav';
 import Generator from './scr/generator';
 import ListenItem from './scr/listitem';
-import Input from './scr/input'
+import Input from './scr/input';
+import Picker from './scr/picker';
 
 
 class App extends Component{
@@ -56,14 +57,18 @@ render() {
       items={this.state.random}
       delete={this.onItemDelete}
       /> */}
-    <ScrollView style={{width:'100%'}}
-    // onContentSizeChange={ (w,h)=> alert(h)}
-    // onMomentumScrollBegin={()=>alert('start')}
-    // onMomentumScrollEnd={()=>alert('end')}
-    onScroll={()=>alert('scrolling')}
+    <ScrollView 
+      style={{width:'100%'}}
+      // onContentSizeChange={ (w,h)=> alert(h)}
+      // onMomentumScrollBegin={()=>alert('start')}
+      // onMomentumScrollEnd={()=>alert('end')}
+      //onScroll={()=>alert('scrolling')}
     >
-<Input/>
-</ScrollView>
+      {/* <Input/> */}
+
+  <Picker/>
+
+      </ScrollView>
     </View>
     );
   }
