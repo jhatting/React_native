@@ -23,6 +23,16 @@ class App extends Component{
 
 }
 
+onItemDelete = (position) => {
+  const newArray = this.state.random.filter((item,index)=>{
+    return position != index;
+  })
+  this.setState({
+    random:newArray
+  })
+  
+}
+
 render() {
   return (
     <View style={style.mainView}>
@@ -40,7 +50,10 @@ render() {
       </View>
 
       <Generator add={this.onAddRandom}/>
-      <ListenItem items={this.state.random}/>
+      <ListenItem 
+      items={this.state.random}
+      delete={this.onItemDelete}
+      />
 
     </View>
     );
