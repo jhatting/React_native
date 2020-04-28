@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, ActivityIndicator} from 'react-native';
 
 import Nav from './scr/nav';
 import Generator from './scr/generator';
@@ -67,6 +67,11 @@ render() {
       {/* <Input/> */}
 
   <Picker/>
+  <ActivityIndicator
+    size="large"
+    color="#0000ff"
+    animating={true}
+  />
 
       </ScrollView>
     </View>
