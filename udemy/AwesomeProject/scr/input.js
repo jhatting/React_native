@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput, button, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, ScrollView } from 'react-native';
 
 class Input extends Component{
 
     state = {
         myTextInput:'',
-        users:['John', 'James', 'Lisa']
+        users:['John', 'James', 'isa', 'ohn', 'ames', 'Lisa' ]
     }
 
     onChangeInput = (event) => {
@@ -25,26 +25,29 @@ class Input extends Component{
 
     render(){
         return(
+        <ScrollView style={{width:'100%'}}>
             <View style={styles.inputWrapper}>
-                {
-                    this.state.users.map( item =>(
-                    <Text style={styles.users} key={item}>{item}</Text>
-                    ))
-                }
-        <TextInput 
-            value={this.state.myTextInput}
-            style={styles.input}
-            onChangeText={this.onChangeInput}
-            // multiline={true}
-            // maxLength={5}
-            // editable={true}
-            // autoCapitalize={'words'}
+                <TextInput 
+                    value={this.state.myTextInput}
+                    style={styles.input}
+                    onChangeText={this.onChangeInput}
+                    // multiline={true}
+                    // maxLength={5}
+                    // editable={true}
+                    // autoCapitalize={'words'}
             />
             <Button
                 title="Add user Name"
                 onPress={this.onAddUser}
             />
+                {
+                    this.state.users.map( item =>(
+                    <Text style={styles.users} key={item}>{item}</Text>
+                    ))
+                }
+        
             </View>
+        </ScrollView>
             
         )
     }

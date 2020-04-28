@@ -37,8 +37,9 @@ onItemDelete = (position) => {
 render() {
   return (
     <View style={style.mainView}>
+      <Nav name={this.state.nameOfApp}/>  
 
-      {/* <Nav name={this.state.nameOfApp}/>
+      {/* 
 
       <View style={style.basicView}>
       <Text style={style.basicText}>Hello Gill</Text>
