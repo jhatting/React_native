@@ -14,8 +14,14 @@ class App extends Component{
   }
 
   onAddRandom = () => {
-    alert('add random')
+    const random = Math.floor(Math.random()*100)+1;
+    this.setState(prevState => {
+      return{
+    random:[...prevState.random,random]
   }
+})
+
+}
 
 render() {
   return (
