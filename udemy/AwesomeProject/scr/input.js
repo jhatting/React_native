@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, TextInput} from 'react-native';
+import { StyleSheet, Text, View, TextInput, button, Button } from 'react-native';
 
 class Input extends Component{
 
     state = {
-        myTextInput:''
+        myTextInput:'',
+        users:['John', 'James', 'Lisa']
     }
 
     onChangeInput = (event) => {
@@ -13,17 +14,35 @@ class Input extends Component{
         })
     }
 
+    onAddUser = () => {
+        this.setState(prevState => {
+            return {
+                myTextInput:'',
+                users:[...prevState.users,prevState.myTextInput]
+            }
+        })
+    }
+
     render(){
         return(
             <View style={styles.inputWrapper}>
+                {
+                    this.state.users.map( item =>(
+                    <Text style={styles.users} key={item}>{item}</Text>
+                    ))
+                }
         <TextInput 
             value={this.state.myTextInput}
             style={styles.input}
             onChangeText={this.onChangeInput}
-            multiline={true}
-            maxLength={5}
-            editable={true}
-            autoCapitalize={'words'}
+            // multiline={true}
+            // maxLength={5}
+            // editable={true}
+            // autoCapitalize={'words'}
+            />
+            <Button
+                title="Add user Name"
+                onPress={this.onAddUser}
             />
             </View>
             
@@ -41,6 +60,14 @@ input:{
     marginTop:20,
     fontSize:20,
     padding:10
+},
+users:{
+    fontSize:30,
+    borderWidth:1,
+    borderColor:'#cecece',
+    padding:10,
+    marginBottom:20
+
 }
 })
 
