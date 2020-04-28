@@ -4,6 +4,7 @@ import { StyleSheet, Text, View} from 'react-native';
 import Nav from './scr/nav';
 import Generator from './scr/generator';
 import ListenItem from './scr/listitem';
+import Input from './scr/input'
 
 
 class App extends Component{
@@ -30,14 +31,14 @@ onItemDelete = (position) => {
   this.setState({
     random:newArray
   })
-  
+
 }
 
 render() {
   return (
     <View style={style.mainView}>
 
-      <Nav name={this.state.nameOfApp}/>
+      {/* <Nav name={this.state.nameOfApp}/>
 
       <View style={style.basicView}>
       <Text style={style.basicText}>Hello Gill</Text>
@@ -53,8 +54,8 @@ render() {
       <ListenItem 
       items={this.state.random}
       delete={this.onItemDelete}
-      />
-
+      /> */}
+<Input/>
     </View>
     );
   }
