@@ -3,12 +3,18 @@ import { StyleSheet, Text, View} from 'react-native';
 
 import Nav from './scr/nav';
 import Generator from './scr/generator';
+import ListenItem from './scr/listitem';
 
 
 class App extends Component{
 
   state = {
-    nameOfApp:'My First Awesome App'
+    nameOfApp:'My First Awesome App',
+    random:[20,837]
+  }
+
+  onAddRandom = () => {
+    alert('add random')
   }
 
 render() {
@@ -27,7 +33,8 @@ render() {
       <Text style={style.basicText}>Hello Gay</Text>
       </View>
 
-      <Generator/>
+      <Generator add={this.onAddRandom}/>
+      <ListenItem items={this.state.random}/>
 
     </View>
     );
