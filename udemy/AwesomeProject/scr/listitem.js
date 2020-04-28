@@ -5,7 +5,7 @@ const ListItem = (props) => {
     return (
         props.items.map((item,id)=>(
         <View style={styles.ListItem} key={id}>
-            <Text>2828</Text>
+            <Text>{item}</Text>
         </View>
         ))
     )
