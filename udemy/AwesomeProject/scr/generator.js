@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button,TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Button,TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight} from 'react-native';
 
 // const generate = () => {
 //     return (
@@ -12,7 +12,7 @@ import { StyleSheet, Text, View, Button,TouchableWithoutFeedback, TouchableOpaci
 
 const generate = (props) => {
    return (
-       <TouchableOpacity
+       <TouchableHighlight
        style={styles.generate}
            onPress={() => props.add()}
            //onLongPress={() => alert('trigger')}
@@ -22,7 +22,7 @@ const generate = (props) => {
       
            <Text style={{color:'#fff'}}>Add Number</Text>
        
-       </TouchableOpacity>
+       </TouchableHighlight>
 )
 }
 
