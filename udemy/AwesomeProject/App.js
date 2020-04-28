@@ -2,13 +2,20 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 
 import Nav from './scr/nav';
+import Generator from './scr/generator';
+
 
 class App extends Component{
+
+  state = {
+    nameOfApp:'My First Awesome App'
+  }
+
 render() {
   return (
     <View style={style.mainView}>
 
-      <Nav/>
+      <Nav name={this.state.nameOfApp}/>
 
       <View style={style.basicView}>
       <Text style={style.basicText}>Hello Gill</Text>
@@ -19,6 +26,9 @@ render() {
       <View style={style.basicView}>
       <Text style={style.basicText}>Hello Gay</Text>
       </View>
+
+      <Generator/>
+
     </View>
     );
   }
