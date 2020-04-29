@@ -6,6 +6,7 @@ import Generator from './scr/generator';
 import ListenItem from './scr/listitem';
 import Input from './scr/input';
 import Picker from './scr/picker';
+import ModalComp from './scr/modals'
 
 import RIP from './scr/assets/images/_JPG_RIP_100.jpg'
 
@@ -73,7 +74,7 @@ render() {
     color="#0000ff"
     animating={true}
 /> */}
-
+{/* 
       <ImageBackground
       source={{uri:'https://picsum.photos/id/237/200/300'}}
       style={style.RIP}
@@ -81,8 +82,10 @@ render() {
       // onLoad={ () => alert('IMAGE Loading ')}
       >
         <Text> Yo BITCH!!</Text>
-      </ImageBackground>
+      </ImageBackground> */}
 
+      <ModalComp/>
+      
       </ScrollView>
     </View>
     );
