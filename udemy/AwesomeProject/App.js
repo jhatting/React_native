@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator} from 'react-native';
+import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Image,ImageBackground} from 'react-native';
 
 import Nav from './scr/nav';
 import Generator from './scr/generator';
@@ -7,6 +7,7 @@ import ListenItem from './scr/listitem';
 import Input from './scr/input';
 import Picker from './scr/picker';
 
+import RIP from './scr/assets/images/_JPG_RIP_100.jpg'
 
 class App extends Component{
 
@@ -66,12 +67,21 @@ render() {
     >
       {/* <Input/> */}
 
-  <Picker/>
+  {/* <Picker/>
   <ActivityIndicator
     size="large"
     color="#0000ff"
     animating={true}
-  />
+/> */}
+
+      <ImageBackground
+      source={{uri:'https://picsum.photos/id/237/200/300'}}
+      style={style.RIP}
+       resizeMode="contain"
+      // onLoad={ () => alert('IMAGE Loading ')}
+      >
+        <Text> Yo BITCH!!</Text>
+      </ImageBackground>
 
       </ScrollView>
     </View>
@@ -89,8 +99,12 @@ const style = StyleSheet.create({
   },
   basicText:{
     fontSize:30, color:'#ffffff', textAlign:'center', padding:20
+  },
+  RIP:{
+    width:'100%',
+    height: 300,
+    marginTop:20
   }
-})
-
+}) 
 
 export default App;
