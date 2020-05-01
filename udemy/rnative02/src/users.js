@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Text, View } from 'react-native';
 
-class HomeScreen extends Component{
+class UsersScreen extends Component{
   render() {
     return(
         <View style={{
@@ -10,7 +10,7 @@ class HomeScreen extends Component{
           justifyContent:'center',
           backgroundColor:'white'
         }}>
-          <Text>Home Screen</Text>
+          <Text>I am the users screen</Text>
 
         </View>
     );
@@ -18,4 +18,4 @@ class HomeScreen extends Component{
 }
 )
 
-export default HomeScreen;
+export default UsersScreen;
