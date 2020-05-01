@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Text, View } from 'react-native';
 
-class UsersScreen extends Component{
+class UserScreen extends Component{
   render() {
     return(
         <View style={{
@@ -16,6 +16,5 @@ class UsersScreen extends Component{
     );
   }
 }
-)
 
-export default UsersScreen;
+export default UserScreen;

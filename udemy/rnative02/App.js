@@ -1,30 +1,19 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
 import {createStackNavigator ,createAppContainer } from '@react-navigation/native';
-import { Text, View } from 'react-native';
 
-class HomeScreen extends Component{
-  render() {
-    return(
-        <View style={{
-          flex:1,
-          alignItems:'center',
-          justifyContent:'center',
-          backgroundColor:'white'
-        }}>
-          <Text>Home Screen</Text>
-
-        </View>
-    );
-  }
-}
+import HomeScreen from './src/home';
+import UserScreen from './src/users';
 
 const AppNavigator = createStackNavigator({
   Home:{
     screen: HomeScreen
+  },
+  Users:{
+    screen: UserScreen
   }
 },{
-  intialRouteName: 'Home'
+  intialRouteName: 'Users'
 })
 
 export default createAppContainer(AppNavigator);

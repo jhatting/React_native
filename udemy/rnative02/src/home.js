@@ -10,12 +10,11 @@ class HomeScreen extends Component{
           justifyContent:'center',
           backgroundColor:'white'
         }}>
-          <Text>Home Screen</Text>
+          <Text>Home   Screen</Text>
 
         </View>
     );
   }
 }
-)
 
 export default HomeScreen;
